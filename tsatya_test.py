@@ -4,7 +4,7 @@ import pyaudio
 import wave
 from pydub import AudioSegment
 from openai import OpenAI
-client = OpenAI(api_key =  os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key = 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)
 
 
 
