@@ -17,8 +17,12 @@ webcam = cv2.VideoCapture(0)
 
 def recognize_speech():
     with mic as source:
-        audio = r.listen(source, timeout=5, phrase_time_limit=3)
-    return r.recognize_google(audio)
+        try:
+            audio = r.listen(source, timeout=5, phrase_time_limit=3)
+            return r.recognize_google(audio)
+        except sr.WaitTimeoutError:
+            print("No speech detected within the timeout period.")
+            return ""
 
 while True:
     try:
