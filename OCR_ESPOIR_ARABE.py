@@ -21,7 +21,7 @@ speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_r
 # Initialize webcam
 webcam = cv2.VideoCapture(0)
 
-client = OpenAI(api_key = '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')
+client = OpenAI(api_key = 'code')#code=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
 
 
 
